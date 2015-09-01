@@ -1,0 +1,12 @@
+#!/bin/bash
+#+
+# This script sleeps until the specified date/time. It accepts any
+# date/time format acceptable to the date(1) command, works out how
+# many seconds in the future that is, and passes the value to sleep(1).
+#-
+
+if [ $# != 1 ]; then
+    echo $'Usage:\n\t'"$0" $'<date-time>\n' 1>&2
+    exit 3
+fi
+exec sleep $(($(date -d "$1" +%s) - $(date -d now +%s)))
