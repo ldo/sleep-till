@@ -1,8 +1,12 @@
 #!/bin/bash
 #+
-# This script sleeps until the specified date/time. It accepts any
-# date/time format acceptable to the date(1) command, works out how
-# many seconds in the future that is, and passes the value to sleep(1).
+# This script sleeps until the specified date/time. Invoke as follows:
+#
+#     sleep-till <when>
+#
+# The <when> argument accepts any date/time format acceptable to the
+# date(1) command.  The script works out how many seconds in the
+# future that is, and passes the value to sleep(1).
 #-
 
 if [ $# != 1 ]; then
