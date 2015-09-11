@@ -9,4 +9,4 @@ if [ $# != 1 ]; then
     echo $'Usage:\n\t'"$0" $'<date-time>\n' 1>&2
     exit 3
 fi
-exec sleep $(($(date -d "$1" +%s) - $(date -d now +%s)))
+exec sleep -- $(($(date -d "$1" +%s) - $(date -d now +%s)))
