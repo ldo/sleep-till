@@ -4,8 +4,8 @@
 #
 #     sleep-till <when>
 #
-# The <when> argument accepts any date/time format acceptable to the
-# date(1) command.  The script works out how many seconds in the
+# The <when> argument accepts any date/time format understood by the
+# date(1) command. The script works out how many seconds in the
 # future that is, and passes the value to sleep(1).
 #-
 
